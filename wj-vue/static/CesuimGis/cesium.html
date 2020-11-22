@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./Cesium/Cesium.js"></script>
+    <style>
+      @import url(./Cesium/Widgets/widgets.css);
+      html,body,#cesiumContainer {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .canvas {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        display:none;
+      }
+      #canvas-a {
+          top: 10px;
+      }
+      #canvas-b {
+          top: 120px;
+      }
+</style>
+  </head>
+  <body>
+    <div id="cesiumContainer"></div>
+    <div id="latlng_show" style="width:500px;height:30px;position:absolute;bottom:40px;right:200px;z-index:1;font-size:15px;">
+      <div style="width:150px;height:30px;float: left;">
+           <font size="3" color="white">经度：<span id="longitude_show"></span></font>
+      </div>
+      <div style="width:150px;height:30px;float: left;">
+           <font size="3" color="white">纬度：<span id="latitude_show"></span></font>
+      </div>
+      <div style="width:200px;height:30px;float: left;">
+           <font size="3" color="white">视角高：<span id="altitude_show"></span>km</font>
+      </div>
+    </div>
+    <canvas id="canvas-a" class="canvas" width="700" height="100"></canvas>
+    <canvas id="canvas-b" class="canvas" width="700" height="100"></canvas>
+    <script>
+      window.onload = function () {
+      }
+   </script>
+  </body>
+  <!--必须在这里引用，不能放在head中-->
+  <script src="./js/moudle.js"></script>
+  <script src="./js/apply.js"></script>
+</html>
+ 
+ 
